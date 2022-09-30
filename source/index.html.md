@@ -36,18 +36,28 @@ API keys are available under account settings.
 
 Get associated account information, including billing cycle, subscription information, and aggregate data.
 
-Headers: Authorization (String)
+### HTTP Request
+
+`GET https://scanbandz.com/api.v1/account`
+
+### Parameters
+
+Parameter | Type | Description
+--------- | ----------- | -----------
+Authorization | Header | API Key
+
+
 
 ```python
 import requests
 
-response = requests.get('http://localhost:8000/api.v1/account', headers={'Authorization': 'API-KEY'})
+response = requests.get('https://scanbandz.com/api.v1/account', headers={'Authorization': 'API-KEY'})
 print(response.json())
 
 ```
 
 ```shell
-curl "http://scanbandz.com/api.v1/account" \
+curl "https://scanbandz.com/api.v1/account" \
   -H "Authorization: API-KEY"
 ```
 
@@ -91,79 +101,6 @@ This endpoint retrieves account and billing cycle information.
 
 ## Get Event Details
 
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2" \
-  -H "Authorization: meowmeowmeow"
-```
-
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
-}
-```
-
-This endpoint retrieves a specific kitten.
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-
-### HTTP Request
-
-`GET http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to retrieve
-
-## Delete a Specific Kitten
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
-```
-
-```shell
-curl "http://example.com/api/kittens/2" \
-  -X DELETE \
-  -H "Authorization: meowmeowmeow"
-```
-
-> The above command returns JSON structured like this:
-
-```json
-{
-  "id": 2,
-  "deleted" : ":("
-}
-```
-
-This endpoint deletes a specific kitten.
-
-### HTTP Request
-
-`DELETE http://example.com/kittens/<ID>`
-
-### URL Parameters
-
-Parameter | Description
---------- | -----------
-ID | The ID of the kitten to delete
-
+# Guests
+## Get Guest Details
+## Post Guest Details
