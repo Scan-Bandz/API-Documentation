@@ -190,42 +190,42 @@ curl "https://scanbandz.com/api.v1/guests" \
 ```
 
 ```json
-Event: {
-pk: 2,
-title: "Lil Wayne Concert",
-host: 2,
-description: "Come join us at the Student Union!",
-event_date: "2022-09-19",
-event_time: "04:20:00",
-created_at: "2022-09-19T14:50:44.509346-04:00",
-expired: false,
-guests: 2,
-qr_generated: false,
-sms_authentication: false,
-guests_attended: 0,
-attendance_ratio: 0,
-uuid: "ea6e369c-cf22-495e-ada2-c00569d6dc69",
-access_code: "miamieats"
+"Event": {
+  "pk": 2,
+  "title": "Lil Wayne Concert",
+  "host": 2,
+  "description": "Come join us at the Student Union!",
+  "event_date": "2022-09-19",
+  "event_time": "04:20:00",
+  "created_at": "2022-09-19T14:50:44.509346-04:00",
+  "expired": false,
+  "guests": 2,
+  "qr_generated": false,
+  "sms_authentication": false,
+  "guests_attended": 0,
+  "attendance_ratio": 0,
+  "uuid": "ea6e369c-cf22-495e-ada2-c00569d6dc69",
+  "access_code": "miamieats"
 },
-Guests: [
-{
-name: "Josh Cap",
-phone_number: "+19802148999",
-extra_tickets: 0,
-attended: false,
-attendance_time: "None",
-uuid: "021b9750-6512-4cc6-8aec-dab887c5ced9",
-qr_code: "None"
-},
-{
-name: "Cam Newton",
-phone_number: "+19802148991",
-extra_tickets: 0,
-attended: false,
-attendance_time: "None",
-uuid: "8c1c1d54-108b-42ef-bf2e-a489078ab5ed",
-qr_code: "None"
-}
+"Guests": [
+  {
+    "name": "Josh Cap",
+    "phone_number": "+19802148999",
+    "extra_tickets": 0,
+    "attended": true,
+    "attendance_time": "None",
+    "uuid": "021b9750-6512-4cc6-8aec-dab887c5ced9",
+    "qr_code": "None"
+  },
+  {
+    "name": "Cam Newton",
+    "phone_number": "+19802148991",
+    "extra_tickets": 0,
+    "attended": false,
+    "attendance_time": "None",
+    "uuid": "8c1c1d54-108b-42ef-bf2e-a489078ab5ed",
+    "qr_code": "None"
+  }
 ]
 ```
 ### HTTP Request
