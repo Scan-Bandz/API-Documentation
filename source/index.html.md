@@ -33,9 +33,6 @@ API keys are available under account settings.
 # Account
 
 ## Get Account Details
-
-Get associated account information, including billing cycle, subscription information, and aggregate data.
-
 ```python
 import requests
 
@@ -51,9 +48,7 @@ curl "https://scanbandz.com/api.v1/account" \
 
 > Make sure to replace `API-KEY` with your API key.
 
-<aside class="notice">
-You must replace <code>API-KEY</code> with your personal API key.
-</aside>
+
 
 > The above command returns JSON structured like this:
 
@@ -83,6 +78,13 @@ You must replace <code>API-KEY</code> with your personal API key.
 }
 ```
 
+
+Get associated account information, including billing cycle, subscription information, and aggregate data.
+
+<aside class="notice">
+You must replace <code>API-KEY</code> with your personal API key.
+</aside>
+
 ### HTTP Request
 
 `GET https://scanbandz.com/api.v1/account`
@@ -99,9 +101,6 @@ Authorization | Header | API Key
 # Events
 
 ## Get Events Details
-
-Retrieve all associated event information and data.
-
 ```python
 import requests
 
@@ -157,6 +156,9 @@ curl "https://scanbandz.com/api.v1/events" \
   }
 ]
 ```
+Retrieve all associated event information and data.
+
+
 
 ### HTTP Request
 
@@ -172,9 +174,6 @@ Authorization | Header | API Key
 
 # Guests
 ## Get Guest Details
-
-Get an event's details and guest list.
-
 ```python
 import requests
 
@@ -228,6 +227,9 @@ curl "https://scanbandz.com/api.v1/guests" \
   }
 ]
 ```
+Get an event's details and guest list.
+
+
 ### HTTP Request
 
 `GET https://scanbandz.com/api.v1/guests`
