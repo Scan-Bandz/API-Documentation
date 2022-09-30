@@ -431,42 +431,44 @@ You must replace <code>API-KEY</code> with your personal API key.
 
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="nl">"Events"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"pk"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lil Wayne Concert"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"host"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Come join us at the Student Union!"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"event_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-19"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"event_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"04:20:00"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-19T14:50:44.509346-04:00"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"expired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"guests"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"qr_generated"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"sms_authentication"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"guests_attended"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"attendance_ratio"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ea6e369c-cf22-695e-ada2-c00697d6dc69"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"access_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"miamieats"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"pk"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Football Game"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"host"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Come support your team!"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"event_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-25"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"event_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08:20:00"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-06-19T14:50:44.509346-04:00"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"expired"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"guests"</span><span class="p">:</span><span class="w"> </span><span class="mi">202</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"qr_generated"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"sms_authentication"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"guests_attended"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"attendance_ratio"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.9</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"da1e369q-cd21-635e-ada2-d00690d6dc69"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"access_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"blazeit"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"Events"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"pk"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lil Wayne Concert"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"host"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Come join us at the Student Union!"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"event_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-19"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"event_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"04:20:00"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-19T14:50:44.509346-04:00"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"expired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"guests"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"qr_generated"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"sms_authentication"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"guests_attended"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"attendance_ratio"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ea6e369c-cf22-695e-ada2-c00697d6dc69"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"access_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"miamieats"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"pk"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Football Game"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"host"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Come support your team!"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"event_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-25"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"event_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"08:20:00"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-06-19T14:50:44.509346-04:00"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"expired"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"guests"</span><span class="p">:</span><span class="w"> </span><span class="mi">202</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"qr_generated"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"sms_authentication"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"guests_attended"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"attendance_ratio"</span><span class="p">:</span><span class="w"> </span><span class="mf">5.9</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"da1e369q-cd21-635e-ada2-d00690d6dc69"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"access_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"blazeit"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <p>Retrieve all associated event information and data.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
@@ -495,48 +497,49 @@ You must replace <code>API-KEY</code> with your personal API key.
   <span class="nt">-H</span> <span class="s2">"Event: EVENT-PK"</span>
 </code></pre></div>
 <blockquote>
-<p>The above command returns JSON structured like this:
-<code>json
-&quot;Event&quot;: {
-  &quot;pk&quot;: 2,
-  &quot;title&quot;: &quot;Lil Wayne Concert&quot;,
-  &quot;host&quot;: 2,
-  &quot;description&quot;: &quot;Come join us at the Student Union!&quot;,
-  &quot;event_date&quot;: &quot;2022-09-19&quot;,
-  &quot;event_time&quot;: &quot;04:20:00&quot;,
-  &quot;created_at&quot;: &quot;2022-09-19T14:50:44.509346-04:00&quot;,
-  &quot;expired&quot;: false,
-  &quot;guests&quot;: 2,
-  &quot;qr_generated&quot;: false,
-  &quot;sms_authentication&quot;: false,
-  &quot;guests_attended&quot;: 0,
-  &quot;attendance_ratio&quot;: 0,
-  &quot;uuid&quot;: &quot;ea6e369c-cf22-495e-ada2-c00569d6dc69&quot;,
-  &quot;access_code&quot;: &quot;miamieats&quot;
-},
-&quot;Guests&quot;: [
-  {
-    &quot;name&quot;: &quot;Josh Cap&quot;,
-    &quot;phone_number&quot;: &quot;+19802148999&quot;,
-    &quot;extra_tickets&quot;: 0,
-    &quot;attended&quot;: true,
-    &quot;attendance_time&quot;: &quot;None&quot;,
-    &quot;uuid&quot;: &quot;021b9750-6512-4cc6-8aec-dab887c5ced9&quot;,
-    &quot;qr_code&quot;: &quot;None&quot;
-  },
-  {
-    &quot;name&quot;: &quot;Cam Newton&quot;,
-    &quot;phone_number&quot;: &quot;+19802148991&quot;,
-    &quot;extra_tickets&quot;: 0,
-    &quot;attended&quot;: false,
-    &quot;attendance_time&quot;: &quot;None&quot;,
-    &quot;uuid&quot;: &quot;8c1c1d54-108b-42ef-bf2e-a489078ab5ed&quot;,
-    &quot;qr_code&quot;: &quot;None&quot;
-  }
-]
-</code>
-Get an event&#39;s details and guest list.</p>
+<p>The above command returns JSON structured like this:</p>
 </blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"Event"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"pk"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lil Wayne Concert"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"host"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Come join us at the Student Union!"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"event_date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-19"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"event_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"04:20:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2022-09-19T14:50:44.509346-04:00"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"expired"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"guests"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"qr_generated"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"sms_authentication"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"guests_attended"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"attendance_ratio"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ea6e369c-cf22-495e-ada2-c00569d6dc69"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"access_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"miamieats"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"Guests"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Josh Cap"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+19802148999"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"extra_tickets"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"attended"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"attendance_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"None"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"021b9750-6512-4cc6-8aec-dab887c5ced9"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"qr_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"None"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cam Newton"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"phone_number"</span><span class="p">:</span><span class="w"> </span><span class="s2">"+19802148991"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"extra_tickets"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"attended"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"attendance_time"</span><span class="p">:</span><span class="w"> </span><span class="s2">"None"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"uuid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8c1c1d54-108b-42ef-bf2e-a489078ab5ed"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"qr_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"None"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Get an event&#39;s details and guest list.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET https://scanbandz.com/api.v1/guests</code></p>
 <h3 id='parameters-3'>Parameters</h3>
