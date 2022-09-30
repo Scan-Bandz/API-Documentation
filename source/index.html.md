@@ -188,6 +188,7 @@ curl "https://scanbandz.com/api.v1/guests" \
   -H "Event: EVENT-PK"
 ```
 
+> The above command returns JSON structured like this:
 ```json
 "Event": {
   "pk": 2,
@@ -262,7 +263,33 @@ curl "https://scanbandz.com/api.v1/guests" \
   -H "Event: EVENT-PK"
   -d "{'Guests':[['Guest Name 1', 'Guest Phone 1'], ['Guest Name 2', 'Guest Phone 2']]}"
 ```
+> The above command returns JSON structured like this:
 
+```json
+{
+"Success": "2 guests added.",
+"Added Guests": [
+    {
+      "name": "Test Add",
+      "phone_number": "+19802108900",
+      "extra_tickets": 0,
+      "attended": false,
+      "attendance_time": "None",
+      "uuid": "5e24433e-dd7e-4fc3-abcc-5443ae994b59",
+      "qr_code": "None"
+    },
+    {
+      "name": "Test Add 2",
+      "phone_number": "+19802148901",
+      "extra_tickets": 0,
+      "attended": false,
+      "attendance_time": "None",
+      "uuid": "3f3eb383-b5ba-4787-93de-88f8a3a77dc0",
+      "qr_code": "None"
+    }
+  ]
+}
+```
 ### HTTP Request
 
 `POST https://scanbandz.com/api.v1/guests`
