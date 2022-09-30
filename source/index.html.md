@@ -123,29 +123,6 @@ You must replace <code>API-KEY</code> with your personal API key.
 > The above command returns JSON structured like this:
 
 ```json
-{
-"Account": {
-  "id": 1,
-  "username": "admin@scanbandz.com",
-  "email": "admin@scanbandz.com",
-  "last_login": "2022-09-29T18:15:41.875526-04:00",
-  "is_active": true
-  },
-"User": {
-  "full_name": "ScanBandz Admin",
-  "phone_number": "",
-  "stripe_subscription_id": "",
-  "text_updates": true,
-  "total_events": 0,
-  "total_guests": 0,
-  "total_attendance": 0,
-  "events_cycle": 0,
-  "guests_cycle": 0,
-  "attendance_cycle": 0,
-  "billing_date": "None",
-  "subscription": 1,
-  }
-}
 ```
 
 ### HTTP Request
