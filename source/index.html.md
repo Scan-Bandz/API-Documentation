@@ -6,7 +6,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - python
 
 toc_footers:
-  - <a href='scanbandz.com/register'>Sign Up for a Developer Key</a>
+  - <a href='https://scanbandz.com/settings'>Get API Key</a>
 
 includes:
   - errors
