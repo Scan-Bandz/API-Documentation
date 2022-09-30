@@ -36,18 +36,6 @@ API keys are available under account settings.
 
 Get associated account information, including billing cycle, subscription information, and aggregate data.
 
-### HTTP Request
-
-`GET https://scanbandz.com/api.v1/account`
-
-### Parameters
-
-Parameter | Type | Description
---------- | ----------- | -----------
-Authorization | Header | API Key
-
-
-
 ```python
 import requests
 
@@ -94,6 +82,19 @@ You must replace <code>API-KEY</code> with your personal API key.
   }
 }
 ```
+
+### HTTP Request
+
+`GET https://scanbandz.com/api.v1/account`
+
+### Parameters
+
+Parameter | Type | Description
+--------- | ----------- | -----------
+Authorization | Header | API Key
+
+
+
 
 # Events
 
