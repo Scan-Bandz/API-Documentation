@@ -48,7 +48,7 @@ curl "http://scanbandz.com/api.v1/account" \
 
 <aside class="notice">
 You must replace <code>API-KEY</code> with your personal API key.
-</aside> -->
+</aside>
 
 > The above command returns JSON structured like this:
 
