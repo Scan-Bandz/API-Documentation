@@ -258,6 +258,7 @@ print(response.json())
 curl "https://scanbandz.com/api.v1/guests" \
   -H "Authorization: API-KEY"
   -H "Event: EVENT-PK"
+  -d "{'Guests':[['Guest Name 1', 'Guest Phone 1'], ['Guest Name 2', 'Guest Phone 2']]}"
 ```
 
 ### HTTP Request
