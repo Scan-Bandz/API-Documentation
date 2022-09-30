@@ -26,10 +26,17 @@ Welcome to the ScanBandz API! You can use this API to access and query guest, ev
 
 We currently offer only examples of language bindings in Shell and Python, but you are free to develop and submit examples in other languages. You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
 
+API keys are available under account settings.
+
+
+
 # Account
 
 ## Get Account Details
 
+Get associated account information, including billing cycle, subscription information, and aggregate data.
+
+Headers: Authorization (String)
 
 ```python
 import requests
