@@ -95,8 +95,6 @@ You must replace <code>API-KEY</code> with your personal API key.
 }
 ```
 
-This endpoint retrieves account and billing cycle information.
-
 # Events
 
 ## Get Event Details
