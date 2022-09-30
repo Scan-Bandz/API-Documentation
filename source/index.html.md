@@ -99,6 +99,41 @@ You must replace <code>API-KEY</code> with your personal API key.
 
 ## Get Event Details
 
+### HTTP Request
+
+`GET https://scanbandz.com/api.v1/events`
+
+### Parameters
+
+Parameter | Type | Description
+--------- | ----------- | -----------
+Authorization | Header | API Key
+
 # Guests
 ## Get Guest Details
+
+### HTTP Request
+
+`GET https://scanbandz.com/api.v1/guests`
+
+### Parameters
+
+Parameter | Type | Description
+--------- | ----------- | -----------
+Authorization | Header | API Key
+Event ID | Header | Event Primary Key
+
 ## Post Guest Details
+
+### HTTP Request
+
+`POST https://scanbandz.com/api.v1/guests`
+
+### Parameters
+
+Parameter | Type | Description
+--------- | ----------- | -----------
+Authorization | Header | API Key
+Event ID | Header | Event Primary Key
+Guest Array | Body | Easily create guests.
+
