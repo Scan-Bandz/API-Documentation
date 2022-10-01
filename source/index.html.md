@@ -38,7 +38,6 @@ import requests
 
 response = requests.get('https://scanbandz.com/api.v1/account', headers={'Authorization': 'API-KEY'})
 print(response.json())
-
 ```
 
 ```shell
@@ -47,8 +46,6 @@ curl "https://scanbandz.com/api.v1/account" \
 ```
 
 > Make sure to replace `API-KEY` with your API key.
-
-
 
 > The above command returns JSON structured like this:
 
@@ -106,15 +103,12 @@ import requests
 
 response = requests.get('https://scanbandz.com/api.v1/events', headers={'Authorization': 'API-KEY'})
 print(response.json())
-
 ```
 
 ```shell
 curl "https://scanbandz.com/api.v1/events" \
   -H "Authorization: API-KEY"
 ```
-
-> Make sure to replace `API-KEY` with your API key.
 
 > The above command returns JSON structured like this:
 
@@ -181,7 +175,6 @@ import requests
 
 response = requests.get('https://scanbandz.com/api.v1/guests', headers={'Authorization': 'API-KEY', 'Event': 'EVENT-PK'})
 print(response.json())
-
 ```
 
 ```shell
@@ -251,15 +244,16 @@ Event | Header | Event Primary Key
 
 ```python
 import requests
+
 data = {
   "Guests": [
     ["Guest Name 1", "Guest Phone 1"],
     ["Guest Name 2", "Guest Phone 2"]
   ]
 }
+
 response = requests.post('https://scanbandz.com/api.v1/guests', headers={'Authorization': 'API-KEY', 'Event': 'EVENT-PK'}, json=data)
 print(response.json())
-
 ```
 
 ```shell
@@ -305,5 +299,56 @@ Parameter | Type | Description
 --------- | ----------- | -----------
 Authorization | Header | API Key
 Event | Header | Event Primary Key
-Guests | Body | Guest(s) information.
+Guests | Json | Guest(s) information in multiple arrays.
 
+
+## Put Guest Attendance
+
+```python
+import requests
+
+data = {
+  "Guests": [
+    "Guest Identifier 1",
+    "Guest Identifier 2",
+    "Guest Identifier 3",
+  ]
+}
+
+response = requests.put('https://scanbandz.com/api.v1/guests', headers={'Authorization': 'API-KEY', 'Event': 'EVENT-PK'}, json=data)
+print(response.json())
+```
+
+```shell
+curl "https://scanbandz.com/api.v1/guests" \
+  -H "Authorization: API-KEY"
+  -H "Event: EVENT-PK"
+  -d "{'Guests':['Guest Identifier 1', 'Guest Identifier 2', 'Guest Identifier 3]}"
+```
+> Accepted Guest Identifiers: Guest Primary Key (int), Guest UUID (string), Guest Phone Number (string of 10 digits).
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "Info" : "3 guests marked attended.", 
+  "Success": [
+      {"Guest Identifier 1": "2022-10-01T12:34:47.444-04:00"},
+      {"Guest Identifier 2": "2022-10-01T12:34:47.444-04:00"},
+      {"Guest Identifier 3": "2022-10-01T12:34:47.444-04:00"},
+    ],
+  "Errors": [{}]
+}
+```
+
+### HTTP Request
+
+`PUT https://scanbandz.com/api.v1/guests`
+
+### Parameters
+
+Parameter | Type | Description
+--------- | ----------- | -----------
+Authorization | Header | API Key
+Event | Header | Event Primary Key
+Guests | Json | Guest(s) PK, UUID, or PHONE in a single array.
