@@ -367,7 +367,6 @@
 
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://scanbandz.com/api.v1/account'</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'API-KEY'</span><span class="p">})</span>
 <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">())</span>
-
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://scanbandz.com/api.v1/account"</span> <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Authorization: API-KEY"</span>
 </code></pre></div>
@@ -425,13 +424,10 @@ You must replace <code>API-KEY</code> with your personal API key.
 
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://scanbandz.com/api.v1/events'</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'API-KEY'</span><span class="p">})</span>
 <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">())</span>
-
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://scanbandz.com/api.v1/events"</span> <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Authorization: API-KEY"</span>
 </code></pre></div>
 <blockquote>
-<p>Make sure to replace <code>API-KEY</code> with your API key.</p>
-
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -494,7 +490,6 @@ You must replace <code>API-KEY</code> with your personal API key.
 
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'https://scanbandz.com/api.v1/guests'</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'API-KEY'</span><span class="p">,</span> <span class="s">'Event'</span><span class="p">:</span> <span class="s">'EVENT-PK'</span><span class="p">})</span>
 <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">())</span>
-
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://scanbandz.com/api.v1/guests"</span> <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Authorization: API-KEY"</span>
   <span class="nt">-H</span> <span class="s2">"Event: EVENT-PK"</span>
@@ -565,15 +560,16 @@ You must replace <code>API-KEY</code> with your personal API key.
 </tr>
 </tbody></table>
 <h2 id='post-guest-details'>Post Guest Details</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s">"Guests"</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">[</span><span class="s">"Guest Name 1"</span><span class="p">,</span> <span class="s">"Guest Phone 1"</span><span class="p">],</span>
     <span class="p">[</span><span class="s">"Guest Name 2"</span><span class="p">,</span> <span class="s">"Guest Phone 2"</span><span class="p">]</span>
   <span class="p">]</span>
 <span class="p">}</span>
+
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="s">'https://scanbandz.com/api.v1/guests'</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'API-KEY'</span><span class="p">,</span> <span class="s">'Event'</span><span class="p">:</span> <span class="s">'EVENT-PK'</span><span class="p">},</span> <span class="n">json</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">())</span>
-
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://scanbandz.com/api.v1/guests"</span> <span class="se">\</span>
   <span class="nt">-H</span> <span class="s2">"Authorization: API-KEY"</span>
   <span class="nt">-H</span> <span class="s2">"Event: EVENT-PK"</span>
@@ -632,6 +628,7 @@ You must replace <code>API-KEY</code> with your personal API key.
 </tr>
 </tbody></table>
 <h2 id='put-guest-attendance'>Put Guest Attendance</h2><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">requests</span>
+
 <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
   <span class="s">"Guests"</span><span class="p">:</span> <span class="p">[</span>
     <span class="s">"Guest Identifier 1"</span><span class="p">,</span>
@@ -639,6 +636,7 @@ You must replace <code>API-KEY</code> with your personal API key.
     <span class="s">"Guest Identifier 3"</span><span class="p">,</span>
   <span class="p">]</span>
 <span class="p">}</span>
+
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="s">'https://scanbandz.com/api.v1/guests'</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s">'Authorization'</span><span class="p">:</span> <span class="s">'API-KEY'</span><span class="p">,</span> <span class="s">'Event'</span><span class="p">:</span> <span class="s">'EVENT-PK'</span><span class="p">},</span> <span class="n">json</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">())</span>
 </code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://scanbandz.com/api.v1/guests"</span> <span class="se">\</span>
