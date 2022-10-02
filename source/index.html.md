@@ -16,7 +16,7 @@ search: true
 code_clipboard: true
 
 meta:
-  - name: description
+  - name: API
     content: Documentation for the ScanBandz API
 ---
 
@@ -36,12 +36,12 @@ API keys are available under account settings.
 ```python
 import requests
 
-response = requests.get('https://scanbandz.com/api.v1/account', headers={'Authorization': 'API-KEY'})
+response = requests.get('https://scanbandz.com/api/v1/account', headers={'Authorization': 'API-KEY'})
 print(response.json())
 ```
 
 ```shell
-curl "https://scanbandz.com/api.v1/account" \
+curl "https://scanbandz.com/api/v1/account" \
   -H "Authorization: API-KEY"
 ```
 
@@ -84,7 +84,7 @@ You must replace <code>API-KEY</code> with your personal API key.
 
 ### HTTP Request
 
-`GET https://scanbandz.com/api.v1/account`
+`GET https://scanbandz.com/api/v1/account`
 
 ### Parameters
 
@@ -101,12 +101,12 @@ Authorization | Header | API Key
 ```python
 import requests
 
-response = requests.get('https://scanbandz.com/api.v1/events', headers={'Authorization': 'API-KEY'})
+response = requests.get('https://scanbandz.com/api/v1/events', headers={'Authorization': 'API-KEY'})
 print(response.json())
 ```
 
 ```shell
-curl "https://scanbandz.com/api.v1/events" \
+curl "https://scanbandz.com/api/v1/events" \
   -H "Authorization: API-KEY"
 ```
 
@@ -158,13 +158,89 @@ Retrieve all associated event information and data.
 
 ### HTTP Request
 
-`GET https://scanbandz.com/api.v1/events`
+`GET https://scanbandz.com/api/v1/events`
 
 ### Parameters
 
 Parameter | Type | Description
 --------- | ----------- | -----------
 Authorization | Header | API Key
+
+## Post New Event
+```python
+import requests
+
+data = {
+    'title': 'New Event',
+    'description': 'description here!',
+    'event_date': '2022-09-25',
+    'event_time': '16:15:00',
+    'type': 'FT'
+}
+
+response = requests.post('https://scanbandz.com/api/v1/events', headers={'Authorization': 'API-KEY'}, json={'Event':data})
+print(response.json())
+```
+
+```shell
+curl "https://scanbandz.com/api/v1/events" \
+  -H "Authorization: API-KEY"
+  -d {'type': 'FT', 'title':'New Event', 'description':'description here', 'event_date':'2022-09-25', 'event_time':'16:15:00'}
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "Event": {
+    "pk": 5,
+    "title": "New Event",
+    "host": 2,
+    "description": "description here!",
+    "event_date": "2022-09-25",
+    "event_time": "16:15:00",
+    "created_at": "2022-10-02T00:00:51.330406-04:00",
+    "expired": false,
+    "guests": 0,
+    "qr_generated": false,
+    "sms_authentication": false,
+    "guests_attended": 0,
+    "attendance_ratio": 0,
+    "uuid": "9698f420-170b-4483-b4d2-6469a9643490",
+    "access_code": "hoteltreating"
+  }
+}
+```
+
+### HTTP Request
+
+`POST https://scanbandz.com/api/v1/events`
+
+### Parameters
+
+Parameter | Type | Description
+--------- | ----------- | -----------
+Authorization | Header | API Key
+Event | Json | Event object
+
+<aside class="notice">
+These are the key value pairs within Event.
+</aside>
+
+Parameter | Type | Description
+--------- | ----------- | -----------
+Title | String | Event title
+Description | String | Event description
+Event_date | String | Event date
+Event_time | String | Event time
+Type | String | Event type identifier
+Price | Float | Only for paid tickets.
+
+Type Identifier | Name
+--------- | -----------
+FT | Free ticket
+PR | Pay to register*
+PU | Pay to unlock*
 
 
 
@@ -173,12 +249,12 @@ Authorization | Header | API Key
 ```python
 import requests
 
-response = requests.get('https://scanbandz.com/api.v1/guests', headers={'Authorization': 'API-KEY', 'Event': 'EVENT-PK'})
+response = requests.get('https://scanbandz.com/api/v1/guests', headers={'Authorization': 'API-KEY', 'Event': 'EVENT-PK'})
 print(response.json())
 ```
 
 ```shell
-curl "https://scanbandz.com/api.v1/guests" \
+curl "https://scanbandz.com/api/v1/guests" \
   -H "Authorization: API-KEY"
   -H "Event: EVENT-PK"
 ```
@@ -231,7 +307,7 @@ Get an event's details and guest list.
 
 ### HTTP Request
 
-`GET https://scanbandz.com/api.v1/guests`
+`GET https://scanbandz.com/api/v1/guests`
 
 ### Parameters
 
@@ -252,12 +328,12 @@ data = {
   ]
 }
 
-response = requests.post('https://scanbandz.com/api.v1/guests', headers={'Authorization': 'API-KEY', 'Event': 'EVENT-PK'}, json=data)
+response = requests.post('https://scanbandz.com/api/v1/guests', headers={'Authorization': 'API-KEY', 'Event': 'EVENT-PK'}, json=data)
 print(response.json())
 ```
 
 ```shell
-curl "https://scanbandz.com/api.v1/guests" \
+curl "https://scanbandz.com/api/v1/guests" \
   -H "Authorization: API-KEY"
   -H "Event: EVENT-PK"
   -d "{'Guests':[['Guest Name 1', 'Guest Phone 1'], ['Guest Name 2', 'Guest Phone 2']]}"
@@ -291,7 +367,7 @@ curl "https://scanbandz.com/api.v1/guests" \
 ```
 ### HTTP Request
 
-`POST https://scanbandz.com/api.v1/guests`
+`POST https://scanbandz.com/api/v1/guests`
 
 ### Parameters
 
@@ -315,12 +391,12 @@ data = {
   ]
 }
 
-response = requests.put('https://scanbandz.com/api.v1/guests', headers={'Authorization': 'API-KEY', 'Event': 'EVENT-PK'}, json=data)
+response = requests.put('https://scanbandz.com/api/v1/guests', headers={'Authorization': 'API-KEY', 'Event': 'EVENT-PK'}, json=data)
 print(response.json())
 ```
 
 ```shell
-curl "https://scanbandz.com/api.v1/guests" \
+curl "https://scanbandz.com/api/v1/guests" \
   -H "Authorization: API-KEY"
   -H "Event: EVENT-PK"
   -d "{'Guests':['Guest Identifier 1', 'Guest Identifier 2', 'Guest Identifier 3]}"
@@ -343,7 +419,7 @@ curl "https://scanbandz.com/api.v1/guests" \
 
 ### HTTP Request
 
-`PUT https://scanbandz.com/api.v1/guests`
+`PUT https://scanbandz.com/api/v1/guests`
 
 ### Parameters
 
