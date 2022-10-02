@@ -6,6 +6,7 @@ language_tabs: # must be one of https://git.io/vQNgJ
   - python
 
 toc_footers:
+  - <a href='https://github.com/JoshCap20/ScanBandz-API-Wrapper'>Python Wrapper</a>
   - <a href='https://scanbandz.com/settings'>Get API Key</a>
 
 includes:
@@ -28,7 +29,7 @@ We currently offer only examples of language bindings in Shell and Python, but y
 
 API keys are available under account settings.
 
-
+A wrapper of the Python API is available <a href='https://github.com/JoshCap20/ScanBandz-API-Wrapper'>here.</a>
 
 # Account
 
